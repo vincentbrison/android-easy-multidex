@@ -48,3 +48,6 @@ android/support/multidex/ZipUtil.class
 
 Here you are, you do not have to bother anymore with dex limitation on number of methods. Keep in mind that it
 will only work on ICS (API 14) and above.
+
+Again, please go read this awesome [article](http://blog.osom.info/2014/10/multi-dex-to-rescue-from-infamous-65536.html)
+of [@alex_lipov](https://twitter.com/alex_lipov) to get the whole explanation.
