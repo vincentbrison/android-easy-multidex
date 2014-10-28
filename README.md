@@ -8,13 +8,14 @@ of [@alex_lipov](https://twitter.com/alex_lipov).
 Easy setup
 ==========
 To be able to overcome the 65536 methods dex limitation, simply do the following steps :
-1. Add to your `android` closure inside your `build.gradle` :
+
+* Add to your `android` closure inside your `build.gradle` :
 ```gradle
 dexOptions {
     preDexLibraries = false
 }
 ```
-2. Add the following closure to your `build.gradle`:
+* Add the following closure to your `build.gradle` :
 ```gradle
 afterEvaluate {
     tasks.matching {
@@ -28,7 +29,7 @@ afterEvaluate {
     }
 }
 ```
-3. Create the file `multidex.keep` in the same folder than the `build.gradle` with the following content :
+* Create the file `multidex.keep` in the same folder than the `build.gradle` with the following content :
 ```
 android/support/multidex/BuildConfig.class
 android/support/multidex/MultiDex$V14.class
@@ -41,10 +42,10 @@ android/support/multidex/MultiDexExtractor.class
 android/support/multidex/ZipUtil$CentralDirectory.class
 android/support/multidex/ZipUtil.class
 ```
-4. Add inside your `libs` folder the `android-support-multidex.jar` located here :
+* Add inside your `libs` folder the `android-support-multidex.jar` located here :
 `ANDROID_HOME/extras/android/support/multidex/library/libs`
-5. If you do not subclassing the Application class, add in your `AndroidManifest.xml`, into the `application` element, the attribut `android:name="android.support.multidex.MultiDexApplication"`
-6. If you are actually subclassing the Application class, make it extending the `MultiDexApplication` class.
+* If you do not subclassing the Application class, add in your `AndroidManifest.xml`, into the `application` element, the attribut `android:name="android.support.multidex.MultiDexApplication"`
+* If you are actually subclassing the Application class, make it extending the `MultiDexApplication` class.
 
 Here you are, you do not have to bother anymore with dex limitation on number of methods. Keep in mind that it
 will only work on ICS (API 14) and above.
