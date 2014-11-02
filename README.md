@@ -1,3 +1,7 @@
+DEPRECATED
+==========
+You should now rely on the official way of doing [muti-dexing](http://tools.android.com/tech-docs/new-build-system).
+
 android-easy-multidex
 =====================
 
